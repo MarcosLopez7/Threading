@@ -91,14 +91,18 @@ int factorial(int n)
 }
 
 
+//Función para reemplazar todos los caracteres de una cadena
+
 string replaceAll(string str, const string& from, const string& to) {
     size_t start_pos = 0;
     while((start_pos = str.find(from, start_pos)) != string::npos) {
         str.replace(start_pos, from.length(), to);
-        start_pos += to.length(); // Handles case where 'to' is a substring of 'from'
+        start_pos += to.length();
     }
     return str;
 }
+
+//Imprime una letra en formato de 5x5
 
 void printLetter(string letter)
 {
