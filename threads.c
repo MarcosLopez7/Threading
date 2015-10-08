@@ -15,7 +15,7 @@ void * combination(void * param);
 void * writeName(void * param);
 
 int factorial(int);
-void writeA(); 
+void writeA();
 void writeB();
 void writeC();
 
@@ -39,11 +39,11 @@ int main(int argc, char *argv[])
 		pthread_create( &tid, &attr, combination,(void *) & arg);
 
 		pthread_join( tid, NULL );
-		
+
 		printf("El resultado de la combinacion es: %f\n", result);
 	}
 	else
-		printf("El primero argumento tiene que ser mayor o igual que el segundo\n");	
+		printf("El primero argumento tiene que ser mayor o igual que el segundo\n");
 
 	return 0;
 }
@@ -57,23 +57,23 @@ void * combination(void * param)
 
 void * writeName(void * param)
 {
-	
+
 }
 
 int factorial(int n)
 {
-	
+
 	int resultF = 1;
 
 	if(n > 1)
 	{
 		int i;
-		
+
 		for( i = n; i > 1; i--)
 		{
 			resultF *= i;
 		}
-		
+
 		return resultF;
 	}
 	else if(n >= 0)
@@ -90,32 +90,13 @@ int factorial(int n)
 
 void writeA()
 {
-	printf("   A \n");	     
-	printf("  A A\n"); 
-	printf("  AAA\n");
-        printf(" A   A\n");
-	        A       A	
-	      \n");
-
 }
 
 void writeB()
 {
-	printf("BBBB
-		B   B
-		BBBB
-		B   B
-		BBBB		
-	   \n");
 }
 
 void writeC()
 {
-	printf(" CCCC
-		C
-		C
-		C
-		 CCCC
-	   \n");
 }
-	
+
